@@ -1,0 +1,16 @@
+.collapsible-header {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  background-color: var(--darkNavy);
+  color: var(--grayscale_0);
+}
+
+.collapsible-content {
+  padding: 8px;
+  border-left: 2px solid #ccc;
+  border-right: 2px solid #ccc;
+  border-bottom: 2px solid #ccc;
+}

@@ -109,88 +109,104 @@
       "id": "s9df8ske-23n23490s8-12nkk123o",
       "friends": [
         {
-          "name": "Stuart Raymond",
+          "firstname": "Stuart",
+          "lastname": "Raymond",
           "jobTitle": "Product Designer",
           "companyName": "Facebook",
           "topFriend": true,
           "image": "/avatars/stuart_raymond.png"
         },
         {
-          "name": "Jamie Cowhan",
+          "firstname": "Jamie",
+          "lastname": "Cowhan",
           "jobTitle": "Senior Designer",
           "companyName": "Facebook",
           "image": "/avatars/jamie_cowhan.png"
         },
         {
-          "name": "Cain Kim",
+          "firstname": "Cain",
+          "lastname": "Kim",
           "jobTitle": "Product Designer",
           "companyName": "LinkedIn"
         },
         {
-          "name": "Tiffany Squires",
+          "firstname": "Tiffany",
+          "lastname": "Squires",
           "jobTitle": "UX Designer",
           "companyName": "Chip Consulting"
         },
         {
-          "name": "Paige Diaz",
+          "firstname": "Paige",
+          "lastname": "Diaz",
           "jobTitle": "Art Director",
           "companyName": "Agency4",
           "topFriend": true
         },
         {
-          "name": "Aleah Emmonds",
+          "firstname": "Aleah",
+          "lastname": "Emmonds",
           "jobTitle": "Product Designer",
           "companyName": "Liberty"
         },
         {
-          "name": "Huda Dunkley",
+          "firstname": "Huda",
+          "lastname": "Dunkley",
           "jobTitle": "Architect",
           "companyName": "Epic"
         },
         {
-          "name": "Aden Gray",
+          "firstname": "Aden",
+          "lastname": "Gray",
           "jobTitle": "Game Designer",
           "companyName": "Voltron"
         },
         {
-          "name": "Joey Moreno",
+          "firstname": "Joey",
+          "lastname": "Moreno",
           "jobTitle": "Product Designer",
           "companyName": "Facebook",
           "topFriend": true
         },
         {
-          "name": "Darell Gentry",
+          "firstname": "Darel",
+          "lastname": "Gentry",
           "jobTitle": "Senior Designer",
           "companyName": "Facebook"
         },
         {
-          "name": "Kellie Church",
+          "firstname": "Kellie",
+          "lastname": "Church",
           "jobTitle": "Product Designer",
           "companyName": "LinkedIn"
         },
         {
-          "name": "Amparo Crosby",
+          "firstname": "Amparo",
+          "lastname": "Crosby",
           "jobTitle": "UX Designer",
           "companyName": "Chip Consulting"
         },
         {
-          "name": "Terrance Robles",
+          "firstname": "Terrance",
+          "lastname": "Robles",
           "jobTitle": "Art Director",
           "companyName": "Agency4",
           "topFriend": true
         },
         {
-          "name": "Dudley Mcgee",
+          "firstname": "Dudley",
+          "lastname": "Mcgee",
           "jobTitle": "Product Designer",
           "companyName": "Liberty"
         },
         {
-          "name": "Jack Orr",
+          "firstname": "Jack",
+          "lastname": "Orr",
           "jobTitle": "Architect",
           "companyName": "Epic"
         },
         {
-          "name": "Heather Li",
+          "firstname": "Heather",
+          "lastname": "Li",
           "jobTitle": "Game Designer",
           "companyName": "Voltron"
         }

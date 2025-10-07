@@ -8,6 +8,21 @@ export const ProfileGroups = () => {
     queryFn: getProfileData,
   });
 
+  const getActivityClass = activity => {
+    switch (activity) {
+      case 'active':
+        return 'activity-active';
+      case 'moderate':
+        return 'activity-moderate';
+      case 'low':
+        return 'activity-low';
+      case 'inactive':
+        return 'activity-inactive';
+      default:
+        return '';
+    }
+  };
+
   if (isLoading)
     return (
       <section id="profile-groups">
@@ -50,14 +65,19 @@ export const ProfileGroups = () => {
         {groups.map(group => (
           <li className="profile-group-results-item" key={group.id}>
             <a
-              className="profile-group-results-card content-card fade-in"
+              className={`profile-group-results-card content-card ${getActivityClass(group.activity)}`}
               href={group.href}
             >
               <div className="profile-group-avatar">
                 <img src={group.image} />
               </div>
-              <div className="profile-group-content">
-                <p className="page-paragraph">{group.name}</p>
+              <div className="profile-group-content" key={group.favorite}>
+                {group.favorite ? (
+                  <span>✩ {group.name} ✩</span>
+                ) : (
+                  <span>{group.name}</span>
+                )}
+                <p className="page-paragraph"></p>
               </div>
             </a>
           </li>

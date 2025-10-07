@@ -1,0 +1,22 @@
+.avatar {
+  display: flex;
+  background-color: var(--deepSmoke);
+  border-radius: 50%;
+  overflow: hidden;
+  justify-content: center; /* horizontal centering */
+  align-items: center; /* vertical centering */
+  height: 90px;
+  width: 90px;
+  min-width: 90px;
+}
+
+.avatar img {
+  height: 100%;
+  width: 100%;
+}
+
+.avatar-initials {
+  color: white;
+  font-weight: bold;
+  font-size: 100%;
+}
