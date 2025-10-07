@@ -1,4 +1,6 @@
 #profile-friends {
+  max-height: 90vh;
+  overflow-y: auto;
 }
 
 .profile-friends-list {

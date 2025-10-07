@@ -15,40 +15,23 @@ export const ProfileFriends = () => {
         <div className="content-card fade-in">
           <h2 className="page-heading-2">Friends</h2>
           <ul className="profile-friends-list">
-            <li className="profile-list-item">
-              <div className="profile-list-item-avatar loading"></div>
-              <div className="profile-list-item-info">
-                <div className="skeleton-block skeleton-block--half loading"></div>
-                <div className="skeleton-block--quarter loading"></div>
-              </div>
-            </li>
-            <li className="profile-list-item">
-              <div className="profile-list-item-avatar loading"></div>
-              <div className="profile-list-item-info">
-                <div className="skeleton-block skeleton-block--half loading"></div>
-                <div className="skeleton-block--quarter loading"></div>
-              </div>
-            </li>
-            <li className="profile-list-item">
-              <div className="profile-list-item-avatar loading"></div>
-              <div className="profile-list-item-info">
-                <div className="skeleton-block skeleton-block--half loading"></div>
-                <div className="skeleton-block--quarter loading"></div>
-              </div>
-            </li>
-            <li className="profile-list-item">
-              <div className="profile-list-item-avatar loading"></div>
-              <div className="profile-list-item-info">
-                <div className="skeleton-block skeleton-block--half loading"></div>
-                <div className="skeleton-block--quarter loading"></div>
-              </div>
-            </li>
+            {[...Array(4)].map((_, i) => (
+              <li className="profile-list-item" key={i}>
+                <div className="profile-list-item-avatar loading"></div>
+                <div className="profile-list-item-info">
+                  <div className="skeleton-block skeleton-block--half loading"></div>
+                  <div className="skeleton-block skeleton-block--quarter loading"></div>
+                </div>
+              </li>
+            ))}
           </ul>
         </div>
       </section>
     );
 
   const { friends } = data;
+  const oneWeekAgo = new Date();
+  oneWeekAgo.setDate(oneWeekAgo.getDate() - 7);
 
   return (
     <section id="profile-friends">
@@ -59,40 +42,51 @@ export const ProfileFriends = () => {
             .sort((a, b) => {
               if (a.topFriend && !b.topFriend) return -1;
               if (!a.topFriend && b.topFriend) return 1;
-
               return a.lastname.localeCompare(b.lastname);
             })
-            .map((friend, index) => (
-              <li className="profile-list-item fade-in" key={index}>
-                <div className="profile-list-item-avatar">
-                  {friend.image ? (
-                    <img
-                      className="loading"
-                      src={friend.image}
-                      alt={`${friend.firstname} ${friend.lastname}`}
-                    />
-                  ) : (
-                    <Avatar
-                      firstName={friend.firstname}
-                      lastName={friend.lastname}
-                      imageUrl={friend.image}
-                      size={60}
-                    />
-                  )}
-                </div>
-                <div className="profile-list-item-info">
-                  {friend.topFriend && (
-                    <span className="top-friend-badge">⭐ Top Friend</span>
-                  )}
-                  <p className="page-paragraph">
-                    {friend.firstname} {friend.lastname}
-                  </p>
-                  <p className="page-micro">
-                    {friend.jobTitle} @ {friend.companyName}
-                  </p>
-                </div>
-              </li>
-            ))}
+            .map((friend, index) => {
+              const hasNewPost =
+                friend.lastPostDate &&
+                new Date(friend.lastPostDate) > oneWeekAgo;
+
+              return (
+                <li className="profile-list-item fade-in" key={index}>
+                  <div className="profile-list-item-avatar">
+                    {friend.image ? (
+                      <img
+                        className="loading"
+                        src={friend.image}
+                        alt={`${friend.firstname} ${friend.lastname}`}
+                      />
+                    ) : (
+                      <Avatar
+                        firstName={friend.firstname}
+                        lastName={friend.lastname}
+                        imageUrl={friend.image}
+                        size={60}
+                      />
+                    )}
+                  </div>
+                  <div className="profile-list-item-info">
+                    {friend.topFriend && (
+                      <span className="top-friend-badge">⭐ Top Friend</span>
+                    )}
+                    <p className="page-paragraph">
+                      {friend.firstname} {friend.lastname}
+                    </p>
+                    <p className="page-micro">
+                      {friend.jobTitle} @ {friend.companyName}
+                    </p>
+                    <p className="page-micro">
+                      {' '}
+                      {hasNewPost && (
+                        <span className="new-post-badge"> 🆕 New Post</span>
+                      )}{' '}
+                    </p>
+                  </div>
+                </li>
+              );
+            })}
         </ul>
       </div>
     </section>

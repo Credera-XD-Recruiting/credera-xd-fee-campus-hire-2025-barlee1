@@ -114,14 +114,16 @@
           "jobTitle": "Product Designer",
           "companyName": "Facebook",
           "topFriend": true,
-          "image": "/avatars/stuart_raymond.png"
+          "image": "/avatars/stuart_raymond.png",
+          "lastPostDate": "2025-09-15T10:20:00Z"
         },
         {
           "firstname": "Jamie",
           "lastname": "Cowhan",
           "jobTitle": "Senior Designer",
           "companyName": "Facebook",
-          "image": "/avatars/jamie_cowhan.png"
+          "image": "/avatars/jamie_cowhan.png",
+          "lastPostDate": "2025-10-05T14:32:00Z"
         },
         {
           "firstname": "Cain",
@@ -133,7 +135,8 @@
           "firstname": "Tiffany",
           "lastname": "Squires",
           "jobTitle": "UX Designer",
-          "companyName": "Chip Consulting"
+          "companyName": "Chip Consulting",
+          "lastPostDate": "2025-10-03T09:47:00Z"
         },
         {
           "firstname": "Paige",
@@ -190,7 +193,8 @@
           "lastname": "Robles",
           "jobTitle": "Art Director",
           "companyName": "Agency4",
-          "topFriend": true
+          "topFriend": true,
+          "lastPostDate": "2025-10-03T14:25:00Z"
         },
         {
           "firstname": "Dudley",

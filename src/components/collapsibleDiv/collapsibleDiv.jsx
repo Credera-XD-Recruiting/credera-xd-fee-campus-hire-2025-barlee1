@@ -1,18 +1,39 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './collapsibleDiv.css';
 
-export const CollapsibleDiv = ({ title, children }) => {
+export const CollapsibleSection = ({ title, children }) => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggle = () => setIsOpen(!isOpen);
+  const toggleSection = () => setIsOpen(prev => !prev);
+
+  const handleKeyDown = e => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault(); // Prevent scrolling when pressing Space
+      toggleSection();
+    }
+  };
 
   return (
-    <div className="collapsible-container">
-      <div className="collapsible-header" onClick={toggle}>
-        <h2 className="page-heading-2">{title}</h2>
+    <div className="collapsible-section">
+      <div
+        role="button"
+        tabIndex="0"
+        aria-expanded={isOpen}
+        aria-controls="collapsible-content"
+        onClick={toggleSection}
+        onKeyDown={handleKeyDown}
+        className="collapsible-header"
+      >
+        <h3>{title}</h3>
         <span>{isOpen ? '▲' : '▼'}</span>
       </div>
-      {isOpen && <div className="collapsible-content">{children}</div>}
+
+      {isOpen && (
+        <div id="collapsible-content" className="collapsible-content">
+          {children}
+        </div>
+      )}
     </div>
   );
 };
+export default CollapsibleSection;

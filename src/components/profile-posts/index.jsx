@@ -2,7 +2,7 @@ import './style.css';
 import { getProfileData } from '../../services/profile';
 import { useQuery } from '@tanstack/react-query';
 import { Avatar } from '../avatar/Avatar';
-import { CollapsibleDiv } from '../../collapsibleDiv/collapsibleDiv';
+import CollapsibleDiv from '../collapsibleDiv/CollapsibleDiv';
 
 export const ProfilePosts = () => {
   const { data, isLoading } = useQuery({
